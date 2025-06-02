@@ -9,10 +9,6 @@ add_subdirectory(formatter_ex_lib)
 add_subdirectory(solver_lib)
 add_subdirectory(solver_application)
 
-install(TARGETS formatter_ex solver_lib solver_app
-    RUNTIME DESTINATION bin
-    ARCHIVE DESTINATION lib
-)
 
 
 
