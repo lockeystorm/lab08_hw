@@ -2,8 +2,8 @@ FROM ubuntu:18.04
 
 RUN apt update && apt install -yy gcc g++ cmake
 
-COPY . /solver_application
-WORKDIR /solver_application
+COPY . solver_application/
+WORKDIR solver_application
 
 RUN cmake -H. -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=_install
 RUN cmake --build build
