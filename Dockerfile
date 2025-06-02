@@ -9,7 +9,7 @@ RUN cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=_insta
     cmake --build build && \
     cmake --build build --target install
 
-ENV LOG_PATH /home/logs/log.txt
+ENV LOG_PATH=/home/logs/log.txt
 
 VOLUME /home/logs
 

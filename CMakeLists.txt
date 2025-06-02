@@ -9,18 +9,13 @@ add_subdirectory(formatter_ex_lib)
 add_subdirectory(solver_lib)
 add_subdirectory(solver_application)
 
-install(TARGETS formatter formatter_ex solver_lib
-    ARCHIVE DESTINATION lib
-    LIBRARY DESTINATION lib
-    INCLUDES DESTINATION include
+install(TARGETS solver_application
+    RUNTIME DESTINATION bin
 )
 
-install(DIRECTORY 
-    formatter_lib/
-    formatter_ex_lib/
-    solver_lib/
-    DESTINATION include
-    FILES_MATCHING PATTERN "*.h"
+install(TARGETS formatter formatter_ex solver_lib
+    ARCHIVE DESTINATION lib
+    INCLUDES DESTINATION include
 )
 
 
