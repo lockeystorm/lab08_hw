@@ -14,7 +14,7 @@ jobs:
       - name: Run Docker image container
         run: |
           mkdir -p logs
-          docker run -it -v "$(pwd)/logs/:/home/logs/" logger
+          docker run --rm -v "$(pwd)/logs/:/home/logs/" logger
           
       - name: Upload logs artifact
         uses: actions/upload-artifact@v4
