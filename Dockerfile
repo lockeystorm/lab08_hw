@@ -5,7 +5,7 @@ RUN apt update && apt install -yy gcc g++ cmake
 COPY . /solver_application
 WORKDIR /solver_application
 
-RUN cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=_install
+RUN cmake -H. -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=_install
 RUN cmake --build build
 RUN cmake --build build --target install
 
