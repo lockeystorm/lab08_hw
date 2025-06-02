@@ -15,4 +15,4 @@ VOLUME /home/logs
 
 WORKDIR /solver_application/_install/bin
 
-ENTRYPOINT ["./solver_application"]
+ENTRYPOINT ./solver_app
