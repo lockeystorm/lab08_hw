@@ -13,10 +13,5 @@ install(TARGETS solver_app
     RUNTIME DESTINATION bin
 )
 
-install(TARGETS formatter formatter_ex solver_lib
-    ARCHIVE DESTINATION lib
-    INCLUDES DESTINATION include
-)
-
 
 
