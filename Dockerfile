@@ -13,6 +13,6 @@ ENV LOG_PATH=/home/logs/log.txt
 
 VOLUME /home/logs
 
-WORKDIR /solver_application/_build/
+WORKDIR /solver_application/install/bin
 
 ENTRYPOINT ["./solver_app"]
