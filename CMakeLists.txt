@@ -9,7 +9,7 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/formatter_ex_lib)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/solver_lib)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/solver_application)
 
-install(TARGETS solver_application
+install(TARGETS solver_app
     RUNTIME DESTINATION bin
 )
 
