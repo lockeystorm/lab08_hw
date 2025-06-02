@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt update && apt install -yy gcc g++ cmake
+RUN apt-get update && apt-get install -yy gcc g++ cmake
 
 COPY . /solver_application
 WORKDIR /solver_application
