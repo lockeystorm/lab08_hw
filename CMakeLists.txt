@@ -9,6 +9,8 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/formatter_ex_lib)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/solver_lib)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/solver_application)
 
+add_executable(solver_app ${CMAKE_CURRENT_SOURCE_DIR}/solver_application/equation.cpp)
+
 install(TARGETS solver_app
     RUNTIME DESTINATION bin
 )

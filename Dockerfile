@@ -2,17 +2,17 @@ FROM ubuntu:18.04
 
 RUN apt update && apt install -yy gcc g++ cmake
 
-COPY . /copied
-WORKDIR /copied/solver_application
+COPY . /solver_application
+WORKDIR /solver_application
 
-RUN cmake -H. -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=install
-RUN cmake --build build
-RUN cmake --build build --target install
+RUN cmake -H. -B_build -DDCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=_install
+RUN cmake --build _build
+RUN cmake --build _build --target install
 
 ENV LOG_PATH=/home/logs/log.txt
 
 VOLUME /home/logs
 
-WORKDIR /install/bin
+WORKDIR /solver_application/_build/
 
 ENTRYPOINT ["./solver_app"]
